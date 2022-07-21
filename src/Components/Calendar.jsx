@@ -50,7 +50,7 @@ const Calendar = () => {
 
   let blanks = [];
   for (let i = 0; i < firstDayOfMonth(); i++) {
-    blanks.push(<Td className="calendar-day empty">{""}</Td>);
+    blanks.push(<Td classNameName="calendar-day empty">{""}</Td>);
   }
 
   let currentDay = () => {
@@ -61,7 +61,7 @@ const Calendar = () => {
   for (let d = 1; d <= 31; d++) {
     let currentD = d == currentDay() ? "today" : "";
     daysInMonth.push(
-      <Td fontSize="xl" key={d} className={`calendar-day ${currentD}`}>
+      <Td fontSize="xl" key={d} classNameName={`calendar-day ${currentD}`}>
         {d}
       </Td>
     );
@@ -204,7 +204,7 @@ const Calendar = () => {
         <Box fontSize="5xl">Calendar</Box>
         <Box>
           <Button onClick={toggleColorMode}>
-            <i class="fas fa-moon"></i>
+            <i className="fas fa-moon"></i>
           </Button>
         </Box>
       </Flex>
@@ -213,7 +213,7 @@ const Calendar = () => {
       <br />
       <Flex justify="space-evenly">
         <Text onClick={(e) => onPrev()}>
-          <i class="fa-solid fa-angle-left fa-xl"></i>
+          <i className="fa-solid fa-angle-left fa-xl"></i>
         </Text>
         <Text
           onMouseOver=""
@@ -226,7 +226,7 @@ const Calendar = () => {
         </Text>
         <Text fontSize="2xl">{year()}</Text>
         <Text onClick={(e) => onNext()}>
-          <i class="fa-solid fa-angle-right fa-xl"></i>
+          <i className="fa-solid fa-angle-right fa-xl"></i>
         </Text>
       </Flex>
       <br />
